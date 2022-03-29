@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://172.18.0.114:3307/lianxi?serverTimeZone=Asia/Shanghai&useSSL=false
+#    url: jdbc:mysql://192.168.1.6:3307/lianxi?serverTimeZone=Asia/Shanghai&useSSL=false
+#    url: jdbc:mysql://172.18.0.113:3307/lianxi?serverTimeZone=Asia/Shanghai&useSSL=false
+
+  jpa:
+    show-sql: true
+    open-in-view: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+        enable_lazy_load_no_trans: true #解决Could not initialize proxy - no Session问题 开启懒加载
+server:
+  port: 8181
